@@ -83,15 +83,19 @@ class HistoryItemDecorator: Identifiable, Hashable, HasVisibility {
   // Describe the complete item independently of its potentially truncated visual content.
   var accessibilityLabel: String {
     var parts: [String] = []
-    if hasImage, let image = item.image {
-      let size = image.pixelSize
-      parts.append(
-        String(
-          format: NSLocalizedString("history_item_image_accessibility_label_no_app", comment: ""),
-          Int(size.width),
-          Int(size.height)
+    if hasImage {
+      if let image = item.image {
+        let size = image.pixelSize
+        parts.append(
+          String(
+            format: NSLocalizedString("history_item_image_accessibility_label_no_app", comment: ""),
+            Int(size.width),
+            Int(size.height)
+          )
         )
-      )
+      } else {
+        parts.append(title)
+      }
     } else {
       parts.append(title)
     }
