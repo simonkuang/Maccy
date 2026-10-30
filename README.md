@@ -1,3 +1,6 @@
+> [!NOTE]
+> **Simon's Performance Optimized Fork**: For details on the storage layer redesign and instant response optimization patch, please see [SIMON_VERSION_README.md](SIMON_VERSION_README.md).
+
 > [!WARNING]
 > **Beware of fake websites impersonating Maccy.** Malicious sites (such as `maccyapp.net` and `maccyapp.com`) distribute malware disguised as Maccy. [**maccy.app**](https://maccy.app) is the **only** official website.
 
